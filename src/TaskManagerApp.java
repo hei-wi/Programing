@@ -12,16 +12,27 @@ class Tak {
 	void showTak() {
 		System.out.println("「" + title + "」" + "は期限：" + dueDate + "、優先度：" + priority);
 	}
+
+	public Tak() {
+
+		title = "未設定";
+		dueDate = "未定";
+		priority = 0;
+		System.out.println("新しいタスクを作成しました。");
+		System.out.println("注意：フィールドは未設定の初期値です。必要に応じて更新してください。");
+	}
 }
 
 public class TaskManagerApp {
 	public static void main(String[] args) {
-		Tak t1 = new Tak("授業資料の作成","2025-10-16",3);
-		Tak t2 = new Tak("大学祭の準備","2025-10-30",1);
-		Tak t3 = new Tak("オープンキャンパスの準備","2025-10-25",2);
-		
+		Tak t1 = new Tak("授業資料の作成", "2025-10-16", 3);
+		Tak t2 = new Tak("大学祭の準備", "2025-10-30", 1);
+		Tak t3 = new Tak("オープンキャンパスの準備", "2025-10-25", 2);
+		Tak t4 = new Tak();
+
 		t1.showTak();
 		t2.showTak();
 		t3.showTak();
+		t4.showTak();
 	}
 }
